@@ -24,6 +24,10 @@
   - [Promise](#promise)
   - [Module](#module)
   - [Callback](#callback)
+
+> “JavaScript: Don’t judge me by my bad parts, learn the good stuff and stick with that!”
+> 
+> <cite>― Eric Freeman, Head First JavaScript Programming</cite>
    
 ### Variabeln Deklaration 
 - `let` deklariert eine Variable im Gültigkeitsbereich des lokalen Blocks
