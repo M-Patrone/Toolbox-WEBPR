@@ -66,7 +66,7 @@ Funktionen können jedoch auch in Variabeln gespeichert werden:
 const square = function(number) { return number * number }
 var x = square(4)
 ```
-Funktionen könne auch als Lambda Funktionen implementiert werden:
+Funktionen können auch als Lambda Funktionen implementiert werden:
 ``` javascript
 const square = a => a*a;
 
@@ -101,7 +101,7 @@ x => 	  plus (x)
 		  plus
 ```
 ### map-Methode
-In dieser Woche haben wir die map() Funktion kennengelernt. Die map() Methode wendet auf jedes Array Element die bereitgestellte Funktion an. Das Resultat wird in einem neuen Array zurückgeben.
+In dieser Woche haben wir die map() Funktion kennengelernt. Die map() Methode wendet auf jedes Array Element die bereitgestellte Funktion an. Das Resultat wird in einem neuen Array zurückgegeben.
 ``` javascript
 const plus = a => b => a + b;
 
@@ -112,7 +112,7 @@ const twoPlus = plus(2);
 [1, 2, 3].map(twoPlus); //output: [3, 4, 5]
 ```
 ### filter-Methode
-Mit der Filter()-Methode kann ein Array gefilter werden. Die Methode wendet auf jedes Array Element die bereitgestellte Funktion an und gibt nur die Elemente zurück, welche den Test besteht. 
+Mit der Filter()-Methode kann ein Array gefiltert werden. Die Methode wendet auf jedes Array Element die bereitgestellte Funktion an und gibt nur die Elemente zurück, welche den Test bestehen. 
 ``` javascript 
 const words = ['Anna','Mike','Annabelle','Kim','Nico','Alexander'];
 
@@ -131,7 +131,7 @@ const multiple = (previousValue, currentValue) => previousValue * currentValue;
 [1, 2, 3].reduce(multiple, 100); //output 600
 ```
 ### Splice-Methode
-Mit der Splice()-Methode kann das Array modifizieren. Man kann damit Elemente löschen oder einfügen.
+Mit der Splice()-Methode kann man das Array modifizieren. Man kann damit Elemente löschen oder einfügen.
 ```javascript
 let names = ["Thomas","Manuel", "Nico"];
 names.splice(1,0, "Antonia","Jennifer");
@@ -159,12 +159,12 @@ Die Funktion eval() wertet JavaScript-Code aus, der als String dargestellt ist.
 ``` javascript
 eval('console.log("Hello World!")'); //output in der Konsole Hello World!
 ```
-**Warnung: Ausführen von Javascript Code via eval() könnte zu grossen Sicherheitsrisiko werden!**
+**Warnung: Ausführen von Javascript Code via eval() könnte zu einem  grossen Sicherheitsrisiko werden!**
 
 Gute Playlist über Javascript Kontext: https://www.youtube.com/watch?v=su-SdgebJCE&list=PLndbWGuLoHea6b3g3fY77U47RiryT2Sr5&index=1
 
 ### Klassen und Objekte
-Es gibt mehrere Variante zur Erstellung von Javascript Objekten:
+Es gibt mehrere Varianten zur Erstellung von Javascript Objekten:
 ``` javascript
 const person = {
   firstName: "John",
@@ -209,12 +209,12 @@ Guter Artikel über `new`: https://www.tutorialsteacher.com/javascript/new-keywo
 It is a template for JavaScript objects."
 ```
 Die Konstruktormethode ist eine besondere Methode:
-- Sie muss den genauen Namen "constructor" haben.
+- Sie muss den Namen "constructor" haben.
 - Sie wird automatisch ausgeführt, wenn ein neues Objekt erstellt wird.
-- Wenn Sie keine Konstruktormethode definieren, fügt JavaScript eine leere Konstruktormethode hinzu.
+- Wenn keine Konstruktormethode definiert wird, fügt JavaScript eine leere Konstruktormethode hinzu.
 
 ### Prototype
-Javascript wird oft als Prototyp-basierte Sprache beschrieben. Der Prototyp ist ein Objekt, das in JavaScript standardmäßig mit allen Funktionen und Objekten verbunden ist, wobei die Prototyp-Eigenschaft der Funktion zugänglich und änderbar ist und die Prototyp-Eigenschaft des Objekts nicht sichtbar ist. Vergleichbar ist dies mit "Object" von Java.
+Javascript wird oft als Prototyp basierte Sprache beschrieben. Der Prototyp ist ein Objekt, das in JavaScript standardmäßig mit allen Funktionen und Objekten verbunden ist, wobei die Prototyp-Eigenschaft der Funktion zugänglich und änderbar ist und die Prototyp-Eigenschaft des Objekts nicht sichtbar ist. Im weitesten Sinne ist es vergleichbar mit "Object" von Java.
 ``` javascript
 function Car() {
     this.type = 'SUV';
@@ -227,11 +227,11 @@ console.log(carObject.age); // 15
 ### Vorgehen beim Programmieren
 1. Schreiben der Tests
 2. Beispiele aufschreiben (Was ist das Resultat?)
-3. Verschiedene Vorgehensweisen
-   1. Erkundne (**Wichtig:** Zeitlimite setzen!)
+3. Vorgehensweise:
+   1. Erkunden (**Wichtig:** Zeitlimite setzen!)
    2. Statisch anfangen
    3. Statische Elemente ersetzen (z.B. durch Variabeln)
-   4. Zusammenfassen (z.B. in einer Funktion) und Refactor
+   4. Zusammenfassen (z.B. in einer Funktion) und Refactor durchführen
    5. Release
    6. Was kann ich das nächste mal besser machen?
 
@@ -242,7 +242,7 @@ Ist für die Darstellung der Daten des Modells.
 ### Controller
 Der Controller steht zwischen Model und View und ist grob gesagt für die Datenmanipulation zuständig.
 ### Observable
-Ein Observable hat mehrere Abonennten, wenn sich der Wert ändert, werden die Abonennten "benachrichtigt". Es wird dann eine bestimmte Funktion ausgeführt, die vorher definiert wurde (Callback).
+Ein Observable hat mehrere Abonnenten, wenn sich der Wert ändert, werden die Abonnenten "benachrichtigt". Es wird dann eine bestimmte Funktion ausgeführt, die vorher definiert wurde (Callback).
 ``` javascript
 const Observable = (value) => {
   const listeners = [];
@@ -319,7 +319,7 @@ export let findModulus = (a, b) => {return a % b;}
 import {findModulus} from './essentials.js';
 ```
 ### Callback
-Ein Callback ist eine Funktion, welche eine Funktion als Parameter übergeben wurde. Ein geeigneter Einsatzzweck von einem Callback wäre, bei einer asynchroner Funktion, bei denen eine Funktion auf eine andere Funktion warten muss (z. B. auf das Laden einer Datei).
+Ein Callback ist eine Funktion, welche eine Funktion als Parameter übergeben wurde. Ein geeigneter Einsatzzweck von einem Callback wäre bei einer asynchroner Funktion, bei denen eine Funktion auf eine andere Funktion warten muss (z. B. auf das Laden einer Datei).
 ``` javascript
  function showResult(res) {
   document.writeln(res);
